@@ -10,7 +10,7 @@ export class UserComponent implements OnInit {
 
 
   @Input()
-  userObj: IUser;
+  user: IUser;
   constructor() { }
 
   ngOnInit(): void {

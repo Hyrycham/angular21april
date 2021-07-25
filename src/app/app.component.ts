@@ -9,9 +9,6 @@ export class AppComponent {
   title = 'hg2021april';
 
 
-constructor(private userService:UserService;) {
-  this.userService.doSomeStuff();
-}
 
 
 
