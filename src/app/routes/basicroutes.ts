@@ -4,14 +4,15 @@ import {AppComponent} from "../app.component";
 import {UserDetailsComponent} from '../components/user-details/user-details.component';
 import {Routes} from "@angular/router";
 import {PostDetailsComponent} from '../components/post-details/post-details.component'
-import {UserPostsComponent} from "../components/user-posts/user-posts.component";
+import {PostsOfUserComponent} from "../components/posts-of-user/posts-of-user.component";
+import {UsersWithPostsComponent} from "../components/users-with-posts/users-with-posts.component";
 export let routes:Routes =[
   {
     path:'users',
     component: UsersComponent,
     children:[
       {path:':id',component: UserDetailsComponent},
-      {path:':id'+'/posts',component: UserPostsComponent},
+      {path:':id'+'/posts',component: PostsOfUserComponent},
     ]
   },
   // {path:'users/id:', component: UserDetailsComponent},
@@ -22,5 +23,13 @@ export let routes:Routes =[
       {path:':id',component: PostDetailsComponent}
     ]
     },
+
+  {
+    path:'userswithposts',
+    component: UsersWithPostsComponent,
+
+  },
+
+
   {path:'', component: AppComponent},
 ]

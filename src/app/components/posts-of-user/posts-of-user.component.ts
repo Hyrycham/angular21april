@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import {IPost} from "../../models/IPost";
+import {IUser} from "../../models/IUser";
 import {ActivatedRoute} from "@angular/router";
 import {UserService} from "../../services/user.service";
-import {IUser} from "../../models/IUser";
-import {IPost} from "../../models/IPost";
 
 @Component({
-  selector: 'app-user-posts',
-  templateUrl: './user-posts.component.html',
-  styleUrls: ['./user-posts.component.scss']
+  selector: 'app-posts-of-user',
+  templateUrl: './posts-of-user.component.html',
+  styleUrls: ['./posts-of-user.component.scss']
 })
-export class UserPostsComponent implements OnInit {
+export class PostsOfUserComponent implements OnInit {
   posts: IPost[];
   user:IUser;
   constructor(private activatedRoute:ActivatedRoute, private userService:UserService) {
     this.activatedRoute.params.subscribe(({id}) => {
       this.userService.getPostByUserId(id).subscribe(value=> this.posts  = value)
     })
-     }
+  }
 
   ngOnInit(): void {
   }

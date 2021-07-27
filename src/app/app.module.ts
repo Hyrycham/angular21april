@@ -10,7 +10,9 @@ import {RouterModule} from "@angular/router";
 import {routes} from "./routes/basicroutes";
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
-import { UserPostsComponent } from './components/user-posts/user-posts.component';
+import { PostsOfUserComponent } from './components/posts-of-user/posts-of-user.component';
+import { UserWithPostsComponent } from './components/user-with-posts/user-with-posts.component';
+import { UsersWithPostsComponent } from './components/users-with-posts/users-with-posts.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { UserPostsComponent } from './components/user-posts/user-posts.component
     PostComponent,
     UserDetailsComponent,
     PostDetailsComponent,
-    UserPostsComponent
+    PostsOfUserComponent,
+    UserWithPostsComponent,
+    UsersWithPostsComponent
   ],
   imports: [
     BrowserModule,

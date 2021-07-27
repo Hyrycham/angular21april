@@ -1,0 +1,28 @@
+
+
+<div class=" flex row wrap " >
+  <div class="card center column flex w25">
+    <div>
+      NAME:{{user.name}}
+    </div>
+    <div>
+      ID {{user.id}}
+    </div>
+    <div>
+      LOGIN: {{user.username}}
+    </div>
+    <div>
+      EMAIL: {{user.email}}
+    </div>
+    <div>
+      PHONE: {{user.phone}}
+    </div>
+
+  </div>
+
+  <div class="inf w75">
+    <app-post *ngFor="let item of posts" [post]="item"> </app-post>
+     </div>
+
+
+</div>
