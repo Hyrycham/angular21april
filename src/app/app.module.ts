@@ -7,6 +7,10 @@ import { UserComponent } from './components/user/user.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
+import {RouterModule} from "@angular/router";
+import {routes} from "./routes/basicroutes";
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +18,14 @@ import { PostComponent } from './components/post/post.component';
     UsersComponent,
     UserComponent,
     PostsComponent,
-    PostComponent
+    PostComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

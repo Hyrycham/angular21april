@@ -9,7 +9,6 @@ import {IPost} from "../models/IPost";
 export class PostService {
   constructor(private httpClient:HttpClient) { }
 
-
   getPosts(): Observable<IPost[]>{
     return this.httpClient.get<IPost []>('https://jsonplaceholder.typicode.com/posts');
   }
