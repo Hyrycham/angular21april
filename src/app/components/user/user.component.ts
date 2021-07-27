@@ -8,8 +8,6 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-
-
   @Input()
   user: IUser;
 
@@ -23,5 +21,8 @@ private activatedRoute: ActivatedRoute,
   }
   navigateToUserDetails(): void{
 this.router.navigate([this.user.id],{relativeTo:this.activatedRoute})
+  };
+  navigateToUserPosts(): void{
+    this.router.navigate([this.user.id+'/posts'],{relativeTo:this.activatedRoute})
   };
 }

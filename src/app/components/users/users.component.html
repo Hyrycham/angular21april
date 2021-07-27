@@ -1,8 +1,15 @@
-<p>users works!</p>
-<div class="inf">
-  <router-outlet> </router-outlet>
-</div>
+<div class="flex row center wrap ">
 
-<app-user *ngFor="let item of users" [user]="item"> </app-user>
+  <div class="center flex column w25">
+    <app-user *ngFor="let item of users" [user]="item"> </app-user>
+  </div>
+
+  <div class="inf w75">
+    <router-outlet> </router-outlet>
+  </div>
+
+
+
+</div>
 
 

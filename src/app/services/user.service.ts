@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {IUser} from "../models/IUser";
+import {IPost} from "../models/IPost";
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,8 @@ getUserById(id:number): Observable<IUser>{
   return this.httpClient.get<IUser>(this.url+'/'+id);
 }
 
-
+  getPostByUserId(id:number): Observable<IPost[]>{
+    return this.httpClient.get<IPost[]>(this.url+'/'+id+'/posts');
+  }
 
 }

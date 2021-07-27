@@ -1,5 +1,19 @@
-<div>
-  <p>{{post.id}}-</p>
-  <p style="background-color: aquamarine">{{post.title}} : </p>
-  <p style="background-color: darkorange">{{post.body}} </p>
+
+
+
+<div style="background-color: orange; margin:2px; padding: 3px" class="wrap center column flex ">
+  <div style="background-color: aquamarine">
+       post's ID: {{post?.id}}
+       TITLE: {{post?.title}}
+  </div>
+  <div>
+    <a routerLink="/posts/{{post?.id}}">details 1 </a>
+  </div>
+<!--  <div>-->
+<!--    <button (click)="navigateToPostDetails()" > details 2</button>-->
+<!--  </div>-->
+
+
 </div>
+
+

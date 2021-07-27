@@ -1,4 +1,17 @@
-<p>{{user.name}} - {{user.id}}  <a routerLink="/users/{{user.id}}">details</a>
-  <button (click)="navigateToUserDetails()" > details2</button>  </p>
+<div class="card center column flex">
+  <div>
+  {{user.name}} - {{user.id}}
+</div>
+  <div>
+     <a routerLink="/users/{{user.id}}">details 1 </a>
+  </div>
+  <div>
+    <button (click)="navigateToUserDetails()" > details 2</button>
+  </div>
+  <div>
+    <button (click)="navigateToUserPosts()" > POSTS of User:{{user.name}}</button>
+  </div>
+
+</div>
 
 
