@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {IUser} from "../../models/IUser";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-user-details',
@@ -10,8 +11,10 @@ import {IUser} from "../../models/IUser";
 export class UserDetailsComponent implements OnInit {
 
   user: IUser;
-  constructor(private activatedRoute:ActivatedRoute) {
-    this.activatedRoute.params.subscribe(value => {console.log(value.id)})
+  constructor(private activatedRoute:ActivatedRoute, private userService:UserService) {
+    this.activatedRoute.params.subscribe(({id}) => {
+      this.userService.getUserById(id).subscribe(value=> this.user  = value)
+    })
   }
 
   ngOnInit(): void {

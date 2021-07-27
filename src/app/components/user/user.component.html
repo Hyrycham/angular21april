@@ -1,3 +1,4 @@
-<p>{{user.name}} - {{user.id}}   </p>
-<!--<button (click)="" )>details</button>-->
-<a routerLink="/users/{{user.id}}">details</a>
+<p>{{user.name}} - {{user.id}}  <a routerLink="/users/{{user.id}}">details</a>
+  <button (click)="navigateToUserDetails()" > details2</button>  </p>
+
+

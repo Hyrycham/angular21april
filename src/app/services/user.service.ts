@@ -15,8 +15,8 @@ private url= 'https://jsonplaceholder.typicode.com/users';
 return this.httpClient.get<IUser []>(this.url);
   }
 
-getUserById(id:number): Observable<IUser[]>{
-  return this.httpClient.get<IUser []>(this.url+'/'+id);
+getUserById(id:number): Observable<IUser>{
+  return this.httpClient.get<IUser>(this.url+'/'+id);
 }
 
 
