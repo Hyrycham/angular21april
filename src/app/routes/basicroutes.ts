@@ -1,6 +1,5 @@
 import {UsersComponent} from "../components/users/users.component";
 import {PostsComponent} from "../components/posts/posts.component";
-import {AppComponent} from "../app.component";
 import {UserDetailsComponent} from '../components/user-details/user-details.component';
 import {Routes} from "@angular/router";
 import {PostDetailsComponent} from '../components/post-details/post-details.component'
@@ -30,6 +29,7 @@ export let routes:Routes =[
 
   },
 
+  // home page
+  // {path:'', redirectTo : '', pathMatch:'full'},
 
-  {path:'', component: AppComponent},
 ]

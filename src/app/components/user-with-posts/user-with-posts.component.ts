@@ -18,6 +18,5 @@ export class UserWithPostsComponent implements OnInit {
 
   ngOnInit(): void {
       this.userService.getPostByUserId(this.user.id).subscribe(value=> {this.posts=value});
- console.log(this.user.id)
-  }
+   }
 }
