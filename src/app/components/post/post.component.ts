@@ -18,7 +18,7 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  navigateToPostDetails(): void{
-    this.router.navigate([this.post.id],{relativeTo:this.activatedRoute})
-  };
+  // navigateToPostDetails(): void{
+  //   this.router.navigate([this.post.id],{relativeTo:this.activatedRoute})
+  // };
 }

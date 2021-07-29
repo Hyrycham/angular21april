@@ -1,2 +1,31 @@
-<p>{{user?.id}} {{user?.name}} {{user?.email}}</p>
-<div class="userJson">{{user| json}}</div>
+<div class="card center column flex w25">
+  <div>
+    NAME:{{user?.name}}
+  </div>
+  <div>
+    ID {{user?.id}}
+  </div>
+  <div>
+    LOGIN: {{user?.username}}
+  </div>
+  <div>
+    EMAIL: {{user?.email}}
+  </div>
+  <div>
+    PHONE: {{user?.phone}}
+  </div>
+  <div>
+    ADDRESS:
+    city: {{user?.address?.city}}<br>
+    street: {{user?.address?.street}}<br>
+    suite: {{user?.address?.suite}}<br>
+    zipcode:  {{user?.address?.zipcode}}
+  </div>
+  <div  class="userJson">
+    COMPANY:{{user?.company?.name}}<br>
+    catchPhrase:{{user?.company?.catchPhrase}}<br>
+    bs:{{user?.company?.bs}}
+  </div>
+
+</div>
+<!--<div class="userJson">{{user| json}}</div>-->

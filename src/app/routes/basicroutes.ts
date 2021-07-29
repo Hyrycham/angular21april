@@ -14,14 +14,11 @@ export let routes:Routes =[
       {path:':id'+'/posts',component: PostsOfUserComponent},
     ]
   },
-  // {path:'users/id:', component: UserDetailsComponent},
-  {
-    path:'posts',
-    component: PostsComponent,
-    children:[
-      {path:':id',component: PostDetailsComponent}
-    ]
-    },
+  // {path:'posts', component: PostsComponent},
+  // {path:'posts/:id', component: PostDetailsComponent},
+
+  {    path:'posts',  component: PostsComponent,
+    children:[{path:':id',component: PostDetailsComponent} ]},
 
   {
     path:'userswithposts',
