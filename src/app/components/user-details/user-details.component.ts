@@ -19,9 +19,13 @@ export class UserDetailsComponent implements OnInit {
     // this.activatedRoute.params.subscribe(({id}) => {
     //   this.userService.getUserById(id).subscribe(value=> this.user  = value)
     // });
-    // console.log(history.state);
-    this.user  = this.router.getCurrentNavigation()?.extras.state as IUser;
 
+    // console.log(history.state);
+        // this.user  = this.router.getCurrentNavigation()?.extras.state as IUser;
+
+    this.activatedRoute.params.subscribe(value => {
+      this.user  = this.router.getCurrentNavigation()?.extras.state as IUser;
+    })
 
 
 
@@ -30,4 +34,7 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  back() {
+history.back()
+  }
 }

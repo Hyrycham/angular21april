@@ -5,14 +5,16 @@ import {Routes} from "@angular/router";
 import {PostDetailsComponent} from '../components/post-details/post-details.component'
 import {PostsOfUserComponent} from "../components/posts-of-user/posts-of-user.component";
 import {UsersWithPostsComponent} from "../components/users-with-posts/users-with-posts.component";
+import {UserGuardService} from "../services/user-guard.service";
 export let routes:Routes =[
   {
     path:'users',
     component: UsersComponent,
     children:[
-      {path:':id',component: UserDetailsComponent},
-      {path:':id'+'/posts',component: PostsOfUserComponent},
-    ]
+      {path:':id',component: UserDetailsComponent, canActivate:[UserGuardService]},
+      {path:':id'+'/posts',component: PostsOfUserComponent, }
+    ],
+    canDeactivate:[UserGuardService],
   },
   // {path:'posts', component: PostsComponent},
   // {path:'posts/:id', component: PostDetailsComponent},
