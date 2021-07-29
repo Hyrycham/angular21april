@@ -16,9 +16,7 @@ export class UserGuardService implements CanDeactivate<boolean>, CanActivate {
     }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-        console.log(route.params.id)
-        return +route.params.id > 0 && +route.params.id <= 10;
-        // return true
-    }
+           return +route.params.id > 0 && +route.params.id <= 10;
+           }
 
 }

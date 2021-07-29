@@ -23,6 +23,6 @@ private activatedRoute: ActivatedRoute,
 this.router.navigate([this.user.id],{relativeTo:this.activatedRoute,state:this.user})
   };
   navigateToUserPosts(): void{
-    this.router.navigate([this.user.id+'/posts'],{relativeTo:this.activatedRoute})
+    this.router.navigate([this.user.id+'/posts'],{relativeTo:this.activatedRoute,state:this.user})
   };
 }

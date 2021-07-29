@@ -26,10 +26,7 @@ export class UserDetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe(value => {
       this.user  = this.router.getCurrentNavigation()?.extras.state as IUser;
     })
-
-
-
-  }
+ }
 
   ngOnInit(): void {
   }

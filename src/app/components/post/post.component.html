@@ -6,11 +6,11 @@
        post's ID: {{post?.id}}   |  TITLE:  {{post?.title}}
       </div>
   <div style="border: solid 1px black " >
-    <a routerLink="/posts/{{post?.id}}"> Details of post </a>
+    <a routerLink="/posts/{{post?.id}}" [state]="post"> Details of post </a>
   </div>
-<!--  <div>-->
-<!--    <button (click)="navigateToPostDetails()" > details 2</button>-->
-<!--  </div>-->
+  <div>
+    <button (click)="navigateToPostDetails()" > details 2</button>
+  </div>
 
 
 </div>
