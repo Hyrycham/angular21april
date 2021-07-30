@@ -6,6 +6,7 @@ import {PostDetailsComponent} from '../components/post-details/post-details.comp
 import {PostsOfUserComponent} from "../components/posts-of-user/posts-of-user.component";
 import {UsersWithPostsComponent} from "../components/users-with-posts/users-with-posts.component";
 import {UserGuardService} from "../services/user-guard.service";
+import {CommentsComponent} from "../components/comments/comments.component";
 export let routes:Routes =[
   {
     path:'users',
@@ -20,14 +21,28 @@ export let routes:Routes =[
   // {path:'posts/:id', component: PostDetailsComponent},
 
   {    path:'posts',  component: PostsComponent,
-    children:[{path:':id',component: PostDetailsComponent} ]},
+    children:[
+      {
+        path:':id',
+        component: PostDetailsComponent,
+        // children:[{path:'comments',component:CommentsComponent}]
+      },
+
+
+
+    ],
+  },
 
   {
     path:'userswithposts',
     component: UsersWithPostsComponent,
 
   },
+  {
+    path:'comments',
+    component: CommentsComponent,
 
+  },
   // home page
   // {path:'', redirectTo : '', pathMatch:'full'},
 

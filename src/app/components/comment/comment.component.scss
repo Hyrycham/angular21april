@@ -1,18 +1,12 @@
-.userJson{
-  background-color: darkturquoise;
-}
-.card{
-  background-color: orange;
-  margin: 5px;
-  padding: 2px;
-  border: solid black 1px;
-  box-sizing: border-box;
-
-}
 .center{
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+.start{
+  justify-content: start;
+  text-align: start;
+  align-items: start;
 }
 .inf{
   background-color: silver;
@@ -31,7 +25,7 @@
 .wrap{
   width: 100%;
   box-sizing: border-box;
-  border: solid 3px blue;
+  border: solid 3px pink;
   margin: 3px;
 }
 .w25{
@@ -39,4 +33,16 @@
 }
 .w75
 { width: 75%;}
+.w100{
+  width: 100%;
+}
 
+.green{
+  background-color: lightgreen;
+};
+.blue{
+  background-color: cornflowerblue;
+}
+.borderTop{
+  border-top: orange solid 2px;
+}
