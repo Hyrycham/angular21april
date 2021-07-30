@@ -28,8 +28,6 @@ export let routes:Routes =[
         // children:[{path:'comments',component:CommentsComponent}]
       },
 
-
-
     ],
   },
 
