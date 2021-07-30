@@ -15,6 +15,7 @@ import { UserWithPostsComponent } from './components/user-with-posts/user-with-p
 import { UsersWithPostsComponent } from './components/users-with-posts/users-with-posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { TestletersComponent } from './test/testleters/testleters.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CommentComponent } from './components/comment/comment.component';
     UserWithPostsComponent,
     UsersWithPostsComponent,
     CommentsComponent,
-    CommentComponent
+    CommentComponent,
+    TestletersComponent
   ],
   imports: [
     BrowserModule,
