@@ -1,11 +1,9 @@
 
-
-
-<div style="background-color: orange; margin:2px; padding: 3px" class="wrap center column flex ">
-  <div style="background-color: darkgray">
+<div  class="wrapPOST center column flex postst">
+  <div  class="postst2 start" >
        post's ID: {{post?.id}}   |  TITLE:  {{post?.title}}
       </div>
-  <div style="border: solid 1px black " >
+  <div class="postst3" >
     <a routerLink="/posts/{{post?.id}}" [state]="post"> Details of post </a>
   </div>
   <div>
