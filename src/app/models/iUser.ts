@@ -1,5 +1,5 @@
-import {IAddress} from "./IAddress";
-import {Icompany} from "./Icompany";
+import {IAddress} from "./iAddress";
+import {ICompany} from "./iCompany";
 
 export  interface IUser {
   id:number;
@@ -9,5 +9,5 @@ export  interface IUser {
   address:IAddress;
   phone:string;
   website:string;
-  company:Icompany;
+  company:ICompany;
 }

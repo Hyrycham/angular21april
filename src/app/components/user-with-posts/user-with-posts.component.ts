@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IUser} from "../../models/IUser";
-import {IPost} from "../../models/IPost";
+import {IUser} from "../../models/iUser";
+import {IPost} from "../../models/iPost";
 import {UserService} from "../../services/user.service";
 
 @Component({

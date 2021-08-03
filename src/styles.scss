@@ -58,14 +58,9 @@
   width: 100%;
   box-sizing: border-box;
   margin: 3px;
+  padding: 2px;
   border: $borderValue;
-}
-
-.wrapComment {
-  @include wrapW100M3(solid 3px pink) ;
-
-}
-
+    }
 .wrapPOST {
   @include wrapW100M3(solid 5px blue);
 }
@@ -101,10 +96,6 @@
 
 .w55 {
   width: 55%;
-}
-
-.w100 {
-  width: 100%;
 }
 
 /////////////////
@@ -158,12 +149,14 @@
     background-color: brown;
   }
 }
-
 /////////
-@for $i from 1 through 20 {
+@for $i from 1 through 250 {
   app-comment:nth-child(#{$i*2}) {
     background-color: lightcoral;
     border: coral 5px solid;
+              }
   }
-}
 
+.p2{
+  padding: 1px 5px ;
+}

@@ -27,7 +27,6 @@ export let routes:Routes =[
         component: PostDetailsComponent,
         // children:[{path:'comments',component:CommentsComponent}]
       },
-
     ],
   },
 

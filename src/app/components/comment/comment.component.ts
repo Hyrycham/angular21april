@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IComment} from "../../models/IComment";
+import {IComment} from "../../models/iComment";
 
 @Component({
   selector: 'app-comment',

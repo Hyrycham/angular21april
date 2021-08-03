@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {PostService} from "../../services/post.service";
-import {IPost} from "../../models/IPost";
+import {IPost} from "../../models/iPost";
 import {CommentsService} from "../../services/comments.service";
-import {IComment} from "../../models/IComment";
+import {IComment} from "../../models/iComment";
 
 
 @Component({

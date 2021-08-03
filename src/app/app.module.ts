@@ -15,6 +15,8 @@ import { UserWithPostsComponent } from './components/user-with-posts/user-with-p
 import { UsersWithPostsComponent } from './components/users-with-posts/users-with-posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { UsersFormComponent } from './components/users-form/users-form.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -31,13 +33,15 @@ import { CommentComponent } from './components/comment/comment.component';
     UsersWithPostsComponent,
     CommentsComponent,
     CommentComponent,
+    UsersFormComponent,
      ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes),
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        RouterModule.forRoot(routes),
+        FormsModule,
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

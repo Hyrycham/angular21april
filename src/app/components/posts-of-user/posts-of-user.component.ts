@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IPost} from "../../models/IPost";
-import {IUser} from "../../models/IUser";
+import {IPost} from "../../models/iPost";
+import {IUser} from "../../models/iUser";
 import {ActivatedRoute} from "@angular/router";
 import {UserService} from "../../services/user.service";
 
