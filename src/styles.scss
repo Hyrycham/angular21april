@@ -150,7 +150,8 @@
   }
 }
 /////////
-@for $i from 1 through 250 {
+//@for $i from 1 through 250 {
+  @for $i from 1 through 5 {
   app-comment:nth-child(#{$i*2}) {
     background-color: lightcoral;
     border: coral 5px solid;

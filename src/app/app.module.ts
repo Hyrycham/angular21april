@@ -16,7 +16,8 @@ import { UsersWithPostsComponent } from './components/users-with-posts/users-wit
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { UsersFormComponent } from './components/users-form/users-form.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { UsersFormsReactiveComponent } from './components/users-forms-reactive/users-forms-reactive.component';
 
 
 @NgModule({
@@ -34,14 +35,16 @@ import {FormsModule} from "@angular/forms";
     CommentsComponent,
     CommentComponent,
     UsersFormComponent,
+    UsersFormsReactiveComponent,
      ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        RouterModule.forRoot(routes),
-        FormsModule,
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule,
 
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
