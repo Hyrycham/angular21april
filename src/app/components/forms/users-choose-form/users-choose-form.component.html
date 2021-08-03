@@ -1,0 +1,15 @@
+<p>users-choose-form works!</p>
+
+
+<form #tref (ngSubmit)="save(tref)" >
+
+    Сhoose user
+  <select name="chooseUser" [(ngModel)]="user.id" >
+    <option value="1" > 1</option>
+
+  </select>
+
+  <button>save</button>
+</form>
+
+

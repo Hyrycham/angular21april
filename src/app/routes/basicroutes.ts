@@ -7,6 +7,7 @@ import {PostsOfUserComponent} from "../components/posts-of-user/posts-of-user.co
 import {UsersWithPostsComponent} from "../components/users-with-posts/users-with-posts.component";
 import {UserGuardService} from "../services/user-guard.service";
 import {CommentsComponent} from "../components/comments/comments.component";
+import {UserResolveService} from "../services/user-resolve.service";
 export let routes:Routes =[
   {
     path:'users',
@@ -15,7 +16,9 @@ export let routes:Routes =[
       {path:':id',component: UserDetailsComponent, canActivate:[UserGuardService]},
       {path:':id'+'/posts',component: PostsOfUserComponent, }
     ],
-    canDeactivate:[UserGuardService],
+    // canDeactivate:[UserGuardService],
+    resolve:{xxx:UserResolveService},
+
   },
   // {path:'posts', component: PostsComponent},
   // {path:'posts/:id', component: PostDetailsComponent},
