@@ -15,9 +15,9 @@ import { UserWithPostsComponent } from './components/user-with-posts/user-with-p
 import { UsersWithPostsComponent } from './components/users-with-posts/users-with-posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentComponent } from './components/comment/comment.component';
-import { UsersFormComponent } from './components/users-form/users-form.component';
+import { TestUsersFormComponent } from './components/test-users-form/test-users-form.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { UsersFormsReactiveComponent } from './components/users-forms-reactive/users-forms-reactive.component';
+import { TestUsersFormsReactiveComponent } from './components/test-users-forms-reactive/test-users-forms-reactive.component';
 
 
 @NgModule({
@@ -34,8 +34,8 @@ import { UsersFormsReactiveComponent } from './components/users-forms-reactive/u
     UsersWithPostsComponent,
     CommentsComponent,
     CommentComponent,
-    UsersFormComponent,
-    UsersFormsReactiveComponent,
+    TestUsersFormComponent,
+    TestUsersFormsReactiveComponent,
      ],
   imports: [
     BrowserModule,

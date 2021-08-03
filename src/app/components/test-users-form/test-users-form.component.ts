@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+// import {TestUsersFormsReactiveComponent} from "../test-users-forms-reactive/test-users-forms-reactive.component";
 
 @Component({
-  selector: 'app-users-form',
-  templateUrl: './users-form.component.html',
-  styleUrls: ['./users-form.component.scss']
+  selector: 'app-test-users-form',
+  templateUrl: './test-users-form.component.html',
+  styleUrls: ['./test-users-form.component.scss']
 })
-export class UsersFormComponent implements OnInit {
+export class TestUsersFormComponent implements OnInit {
 user={username:'vasya',
   password:'1111',
 status:true,
