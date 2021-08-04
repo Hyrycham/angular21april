@@ -6,8 +6,7 @@
       </select>
 
   <div class="flex center column ">
-<div class=" red p2">
-
+<div  *ngIf="myForm.controls.id.errors"   class=" red p2">
   <span *ngIf="myForm.controls.id.errors"> input required</span>
   <span *ngIf="myForm.controls.id.errors?.min">
      min value of ID is {{myForm.controls.id.errors?.min.min}}.
@@ -16,8 +15,12 @@
   <span *ngIf="myForm.controls.id.errors?.max">
      max value of ID is {{myForm.controls.id.errors?.max.max}}.
     current value is {{myForm.controls.id.errors?.max.actual}}  </span>
-
 </div>
+
+    <div  *ngIf="!(myForm.controls.id.errors)"   class=" green p2">
+      !!!!ID is valid!!!!
+    </div>
+
    <div >
     <button [disabled]="myForm.invalid">save</button>
   </div>
