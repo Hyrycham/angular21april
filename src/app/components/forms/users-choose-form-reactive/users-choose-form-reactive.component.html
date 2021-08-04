@@ -7,7 +7,7 @@
 
   <div class="flex center column ">
 <div  *ngIf="myForm.controls.id.errors"   class=" red p2">
-  <span *ngIf="myForm.controls.id.errors"> input required</span>
+  <span *ngIf="myForm.controls.id.errors.alarm"> input required</span>
   <span *ngIf="myForm.controls.id.errors?.min">
      min value of ID is {{myForm.controls.id.errors?.min.min}}.
     current value is {{myForm.controls.id.errors?.min.actual}}  </span>
