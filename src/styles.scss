@@ -11,7 +11,9 @@
   align-self: start;
   text-align: start;
 }
-
+.between{
+  justify-content: space-between;
+}
 .flex {
   display: flex;
 }

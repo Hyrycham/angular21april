@@ -20,6 +20,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TestUsersFormsReactiveComponent } from './components/test-users-forms-reactive/test-users-forms-reactive.component';
 import { UsersChooseFormComponent } from './components/forms/users-choose-form/users-choose-form.component';
 import {CommonModule} from "@angular/common";
+import { UsersChooseFormReactiveComponent } from './components/forms/users-choose-form-reactive/users-choose-form-reactive.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {CommonModule} from "@angular/common";
     TestUsersFormComponent,
     TestUsersFormsReactiveComponent,
     UsersChooseFormComponent,
+    UsersChooseFormReactiveComponent,
      ],
   imports: [
     BrowserModule,
