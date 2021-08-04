@@ -19,6 +19,7 @@ import { TestUsersFormComponent } from './components/test-users-form/test-users-
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TestUsersFormsReactiveComponent } from './components/test-users-forms-reactive/test-users-forms-reactive.component';
 import { UsersChooseFormComponent } from './components/forms/users-choose-form/users-choose-form.component';
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -45,7 +46,7 @@ import { UsersChooseFormComponent } from './components/forms/users-choose-form/u
     RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
-
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

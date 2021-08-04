@@ -1,15 +1,21 @@
 <p>users-choose-form works!</p>
 
 
-<form #tref (ngSubmit)="save(tref)" >
+<form  #tref (ngSubmit)="save(tref)" >
 
-    Сhoose user
-  <select name="chooseUser" [(ngModel)]="user.id" >
-    <option value="1" > 1</option>
 
-  </select>
+    {{users[8].id}}
+
+    <select  name="chooseUser" [(ngModel)]="id" >
+
+      <option   *ngFor="let user for users"  value="{{user.id}}"  > 1 </option>
+<!--      <option   *ngFor=" let $i for [1,2,3,4,5,6,7]"  value="{{$i}}"  > {{$i}} </option>-->
+
+    </select>
+
 
   <button>save</button>
+
 </form>
 
 

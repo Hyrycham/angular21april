@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {IUser} from "../../../models/iUser";
+
 
 @Component({
   selector: 'app-users-choose-form',
@@ -6,23 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users-choose-form.component.scss']
 })
 export class UsersChooseFormComponent implements OnInit {
-  userQ={username:'vasya',
-    password:'1111',
-    status:true,
-    gender: "male",
-    level:'',
-    id:1
-  }
-  constructor() {
+  @Input()   users: IUser[];
+  id= 0;
 
-  }
+  constructor() {
+      }
 
   ngOnInit(): void {
+    console.log(this.users)
+
   }
 
   save(tref: HTMLFormElement){
-    console.log(this.user)
-    console.log(tref)
+       console.log(tref);
+    console.log(this.id)
+
     // console.log(tref.username.value)
   }
 
