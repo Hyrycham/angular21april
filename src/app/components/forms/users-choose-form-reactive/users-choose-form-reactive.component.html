@@ -2,13 +2,30 @@
 <form [formGroup]="myForm" (ngSubmit)="save()" >
   Choose User REACTIVE
   <select  name="Choose User " [formControl]="id" >
-    <option   *ngFor="let user of users"  [value]="user.id" > {{user.name}}</option>
+    <option   *ngFor="let user of users"  [value]="user.id" > {{user.name}}-{{user.id}}</option>
       </select>
 
-<!--  <span *ngIf="myForm.controls.idN.errors?.required"> input required</span>-->
-<!--  <span *ngIf="myForm.controls.id.errors?.min">-->
-<!--     min  is {{myForm.controls.id.errors?.min}}  </span>-->
+  <div class="flex center column ">
+<div class=" red p2">
 
-  <button [disabled]="myForm.invalid">save</button>
+  <span *ngIf="myForm.controls.id.errors"> input required</span>
+  <span *ngIf="myForm.controls.id.errors?.min">
+     min value of ID is {{myForm.controls.id.errors?.min.min}}.
+    current value is {{myForm.controls.id.errors?.min.actual}}  </span>
+
+  <span *ngIf="myForm.controls.id.errors?.max">
+     max value of ID is {{myForm.controls.id.errors?.max.max}}.
+    current value is {{myForm.controls.id.errors?.max.actual}}  </span>
+
+</div>
+   <div >
+    <button [disabled]="myForm.invalid">save</button>
+  </div>
+
+  </div>
+
+
+
+
 </form>
 

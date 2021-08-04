@@ -137,6 +137,10 @@
 .blue {
   @include ColorB(cornflowerblue)
 }
+
+.red {
+  @include ColorB(red)
+}
 ////////////////
 .borderTop {
   border-top: orange solid 2px;

@@ -14,14 +14,14 @@ export class UsersChooseFormReactiveComponent implements OnInit {
     customValidator(control: AbstractControl) {
     // if ((control.value < 0)||((control.value >8))) {
       if (!(control.value)||(control.value < 0)||((control.value >10))) {
-      return {achtung: 'id>10 or id<0'}
+      return {alarm: 'id>10 or id<0'}
     }
     return null
   };
 
 
   id = new FormControl(null,
-    [Validators.min(0), this.customValidator],
+    [Validators.min(2), Validators.max(9),this.customValidator],
   );
 
   myForm: FormGroup = new FormGroup({
@@ -30,15 +30,15 @@ export class UsersChooseFormReactiveComponent implements OnInit {
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,) {
+
   }
 
   ngOnInit(): void {
-
+    // console.log(this.myForm.controls.id)
   }
 
   save() {
-    // console.log(this.id.value)
-          this.router.navigate([this.id.value],
+            this.router.navigate([this.id.value],
         {relativeTo: this.activatedRoute,
           state:this.users.find(val => {return (val.id==this.id.value)}) })
 
