@@ -6,8 +6,7 @@ import { UserComponent } from './components/user/user.component';
 import { HttpClientModule} from "@angular/common/http";
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
-import {RouterModule} from "@angular/router";
-import {routes} from "./routes/basicroutes";
+// import {RouterModule} from "@angular/router";
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
 import { PostsOfUserComponent } from './components/posts-of-user/posts-of-user.component';
@@ -21,6 +20,7 @@ import { TestUsersFormsReactiveComponent } from './components/test-users-forms-r
 import { UsersChooseFormComponent } from './components/forms/users-choose-form/users-choose-form.component';
 import {CommonModule} from "@angular/common";
 import { UsersChooseFormReactiveComponent } from './components/forms/users-choose-form-reactive/users-choose-form-reactive.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 
 @NgModule({
@@ -45,10 +45,13 @@ import { UsersChooseFormReactiveComponent } from './components/forms/users-choos
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
+    // RouterModule.forRoot(routes),
+
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    // UserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

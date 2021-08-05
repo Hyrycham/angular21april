@@ -12,23 +12,23 @@ import {TestUsersFormComponent} from "../components/test-users-form/test-users-f
 import {CommentsResolveService} from "../services/comments-resolve.service";
 import {UserResolveService} from "../services/user-resolve.service";
 import {PostsOfUserResolveService} from "../services/posts-of-user-resolve.service";
-export let routes:Routes =[
-  {
-    path:'users',
-    component: UsersComponent,
-    children:[
-      {path:':id',
-        component: UserDetailsComponent,
-        canActivate:[UserGuardService],
-        resolve:{waitData:UserResolveService}},
-      {  path:':id'+'/posts',
-        component: PostsOfUserComponent,
-        resolve:{waitData:PostsOfUserResolveService}}
-    ],
-    // canDeactivate:[UserGuardService],
-    resolve:{xxx:UsersResolveService},
-
-  },
+export let routesBasic:Routes =[
+  // {
+  //   path:'users',
+  //   component: UsersComponent,
+  //   children:[
+  //     {path:':id',
+  //       component: UserDetailsComponent,
+  //       canActivate:[UserGuardService],
+  //       resolve:{waitData:UserResolveService}},
+  //     {  path:':id'+'/posts',
+  //       component: PostsOfUserComponent,
+  //       resolve:{waitData:PostsOfUserResolveService}}
+  //   ],
+  //   // canDeactivate:[UserGuardService],
+  //   resolve:{xxx:UsersResolveService},
+  //
+  // },
   // {path:'posts', component: PostsComponent},
   // {path:'posts/:id', component: PostDetailsComponent},
 
@@ -56,9 +56,11 @@ export let routes:Routes =[
     path:'test',
     component: TestUsersFormComponent,
   },
-
-
   // home page
   // {path:'', redirectTo : '', pathMatch:'full'},
+
+  {
+    path:'users', loadChildren: ()=> import('../user/user.module').then(m=>m.UserModule)
+  },
 
 ]
