@@ -11,12 +11,17 @@ import {UserService} from "../../services/user.service";
 })
 export class PostsOfUserComponent implements OnInit {
   posts: IPost[];
-  user:IUser;
-  constructor(private activatedRoute:ActivatedRoute, private userService:UserService) {
-    this.activatedRoute.params.subscribe(({id}) => {
-      this.userService.getPostByUserId(id).subscribe(value=> this.posts  = value)
-    })
+    constructor(private activatedRoute:ActivatedRoute, private userService:UserService) {
+
+    this.activatedRoute.data.subscribe(value => {
+      this.posts = value.waitData;
+        })
+
   }
+    //         this.activatedRoute.params.subscribe(({id}) => {
+    //   this.userService.getPostByUserId(id).subscribe(value=> this.posts  = value)
+    // })
+
 
   ngOnInit(): void {
   }

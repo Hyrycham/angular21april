@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {UserService} from "./user.service";
+import {CommentsService} from "./comments.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserResolveService implements Resolve<any>{
+export class CommentsResolveService implements Resolve<any>{
 
-  constructor(private  userService: UserService) { }
+  constructor(private  commentsService: CommentsService) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
-        return this.userService.getUserById(route.params.id);
-
-
+    return this.commentsService.getAllComments();
   }
 }

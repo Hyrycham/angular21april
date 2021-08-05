@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {IUser} from "../../models/iUser";
 import {UserService} from "../../services/user.service";
-import {IPost} from "../../models/iPost";
 
 @Component({
   selector: 'app-user-details',
@@ -10,6 +9,7 @@ import {IPost} from "../../models/iPost";
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
+  // @Input() user: IUser;
   dataInfo:string;
   user: IUser;
   constructor(
@@ -36,15 +36,19 @@ export class UserDetailsComponent implements OnInit {
         this.dataInfo='USER`S  data getting from STATE';
       })
     }
-    else{
-      this.activatedRoute.params.subscribe(({id}) => {
-        this.userService.getUserById(id).subscribe(value=> {
-          this.user = value;
-          // console.log('get'+this.user?.id);
-          this.dataInfo='USER`S data getting from API'
-             });
-
-      })
+    else {
+      this.activatedRoute.data.subscribe(value => {
+        this.user=value.waitData
+        this.dataInfo='USER`S data getting from API'
+      } )
+      // this.activatedRoute.params.subscribe(({id}) => {
+      //   this.userService.getUserById(id).subscribe(value=> {
+      //     this.user = value;
+      //     // console.log('get'+this.user?.id);
+      //     this.dataInfo='USER`S data getting from API'
+      //        });
+      //
+      // })
     }
 
 
