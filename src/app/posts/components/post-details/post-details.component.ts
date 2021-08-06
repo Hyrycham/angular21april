@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {PostService} from "../../services/post.service";
 import {IPost} from "../../../models/iPost";
-// import {CommentsService} from "../../../services/comments.service";
-import {IComment} from "../../../models/iComment";
 
 @Component(
   {
@@ -15,22 +13,19 @@ import {IComment} from "../../../models/iComment";
 export class PostDetailsComponent implements OnInit {
 
 post:IPost;
-comments:IComment[];
 dataInfo:string;
 
   constructor(
     private activatedRoute:ActivatedRoute,
     private postService:PostService,
     private router:Router,
-    // private commentsService:CommentsService,
+
   )
   {
     if(this.router.getCurrentNavigation()?.extras.state){
   this.activatedRoute.params.subscribe(value => {
     this.post  = this.router.getCurrentNavigation()?.extras.state as IPost;
-    // this.commentsService.getCommentsByPostId(this.post?.id).subscribe(value=>
-    //   {this.comments=value });
-        this.dataInfo='POST`S  data getting from STATE';
+           this.dataInfo='POST`S  data getting from STATE';
   })
 }
 else{
@@ -38,8 +33,7 @@ else{
     this.postService.getPostById(id).subscribe(value=> {
       this.post = value;
        this.dataInfo='POST`S data getting from API'
-      // this.commentsService.getCommentsByPostId(this.post?.id).subscribe(value=>
-      // {this.comments=value });
+
     });
   })
 }

@@ -19,4 +19,4 @@ export class PostService {
     return this.httpClient.get<IPost>(this.url+'/'+id);
   }
 }
-// https://jsonplaceholder.typicode.com/user/1/posts
+

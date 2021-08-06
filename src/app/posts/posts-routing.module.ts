@@ -9,7 +9,7 @@ const routes: Routes = [
       {
         path:':id',
         component: PostDetailsComponent,
-        // children:[{path:'comments',component:CommentsComponent}]
+
       },
     ],
   },
