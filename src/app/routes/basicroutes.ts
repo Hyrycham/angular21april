@@ -32,15 +32,15 @@ export let routesBasic:Routes =[
   // {path:'posts', component: PostsComponent},
   // {path:'posts/:id', component: PostDetailsComponent},
 
-  {    path:'posts',  component: PostsComponent,
-    children:[
-      {
-        path:':id',
-        component: PostDetailsComponent,
-        // children:[{path:'comments',component:CommentsComponent}]
-      },
-    ],
-  },
+  // {    path:'posts',  component: PostsComponent,
+  //   children:[
+  //     {
+  //       path:':id',
+  //       component: PostDetailsComponent,
+  //       // children:[{path:'comments',component:CommentsComponent}]
+  //     },
+  //   ],
+  // },
 
   {
     path:'userswithposts',
@@ -62,5 +62,7 @@ export let routesBasic:Routes =[
   {
     path:'users', loadChildren: ()=> import('../user/user.module').then(m=>m.UserModule)
   },
-
+  {
+    path:'posts', loadChildren: ()=> import('../posts/posts.module').then(m=>m.PostsModule)
+  },
 ]

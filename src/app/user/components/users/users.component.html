@@ -1,2 +1,24 @@
 <p>users works! {{currentDataCellValue}}</p>
 <button (click)="decrementDataCellValue()"> decrement</button>
+<div class="flex row between wrap blue ">
+<!--  <app-users-choose-form  [users]="users"></app-users-choose-form>-->
+<!--  <app-users-choose-form-reactive [users]="users"> </app-users-choose-form-reactive>-->
+</div>
+
+
+<div class="flex row center wrap ">
+
+  <div class=" flex column w25">
+    <app-user *ngFor="let item of users" [user]="item" (xxx)="cathEE($event)"> </app-user>
+
+  </div>
+
+  <div class="inf w75 start ">
+<!--  {{selectedUser|json}}-->
+        <router-outlet> </router-outlet>
+  </div>
+
+
+
+</div>
+
