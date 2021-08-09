@@ -1,0 +1,19 @@
+<p>user works!</p>
+<div class="card  column center  ">
+  <div>
+    {{user.name}} - {{user.id}}
+  </div>
+  <div>
+    <a [routerLink]="[user.id]" [state]="user" >go to details </a>
+  </div>
+  <div>
+    <button (click)="navigateToUserDetails()" > go to details </button>
+  </div>
+  <div>
+    <button    (click)="selectUser()" > select user</button>
+  </div>
+
+</div>
+
+
+
