@@ -1,9 +1,20 @@
 import { Injectable } from '@angular/core';
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
+import {ICarFull} from "../../interfaces";
+import {Observable} from "rxjs";
+import {CarService} from "../car.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class CarFullResolveService {
+export class CarFullResolveService implements Resolve<ICarFull>{
 
-  constructor() { }
+  constructor(private carService:CarService) { }
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ICarFull> | Promise<ICarFull> | ICarFull {
+    return this.carService.getAll();
+  }
+
+
+
 }

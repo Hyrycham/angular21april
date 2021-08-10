@@ -6,11 +6,12 @@ export interface ICar{
 };
 
 export interface ICarFull {
-links:{
-  next:string;
-  prev:string;
-},
+links:ILinks;
 count:number;
 data:ICar[];
 
+};
+export interface ILinks{
+  next:string;
+  prev:string;
 }

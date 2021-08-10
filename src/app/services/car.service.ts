@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {ICar, ICarFull} from "../interfaces";
 import {urls} from "../constants";
@@ -11,8 +11,11 @@ export class CarService {
 
   constructor(private httpClient:HttpClient) { }
 
-  getAll():Observable<ICarFull> {
- return this.httpClient.get<ICarFull>(urls.cars)
+
+  getAll(url:string|null =null):Observable<ICarFull> {
+ return this.httpClient.get<ICarFull>(url||urls.cars,{
+
+    })
   }
 
 getById(id:number):Observable<ICar>{
