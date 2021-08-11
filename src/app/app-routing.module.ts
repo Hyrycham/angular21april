@@ -4,9 +4,10 @@ import {HomeComponent} from "./components/home/home.component";
 import {CarsComponent} from "./components/home/cars/cars.component";
 import {CarComponent} from "./components/home/cars/car/car.component";
 import {CarFullResolveService} from "./services";
+import {UsersComponent} from "./components/users/users.component";
 
 const routes: Routes = [
-  // {path: '', redirectTo: 'cars', pathMatch: 'full'},
+  {path: '', redirectTo: 'cars', pathMatch: 'full'},
   {
     path: '', component: HomeComponent, resolve:{cars:CarFullResolveService}, children: [
       {
@@ -15,7 +16,8 @@ const routes: Routes = [
         ]
       }
     ]
-  }
+  },
+  {path:'users', component:UsersComponent}
 ];
 
 @NgModule({

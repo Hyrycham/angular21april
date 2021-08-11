@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
+import {CarService} from "../car.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class CarResolveService {
+export class CarResolveService implements Resolve<any>{
 
-  constructor() { }
+  constructor(private  carService:CarService) { }
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
+
+
+    return this.carService.getById(route.params.id);
+
+  }
 }

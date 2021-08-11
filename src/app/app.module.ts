@@ -9,6 +9,9 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/home/nav/nav.component';
 import { CarsComponent } from './components/home/cars/cars.component';
 import { CarComponent } from './components/home/cars/car/car.component';
+import { UsersComponent } from './components/users/users.component';
+import { FormComponent } from './components/users/form/form.component';
+import { UserComponent } from './components/users/user/user.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { CarComponent } from './components/home/cars/car/car.component';
     NavComponent,
     CarsComponent,
     CarComponent,
+    UsersComponent,
+    FormComponent,
+    UserComponent,
 
      ],
   imports: [

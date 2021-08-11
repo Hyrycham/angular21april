@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {ICar} from "../../../interfaces";
+import {DataTransferService} from "../../../services";
 
 @Component({
   selector: 'app-cars',
@@ -9,12 +10,13 @@ import {ICar} from "../../../interfaces";
 })
 export class CarsComponent implements OnInit {
 cars:ICar[];
-  constructor(private router:Router) {
-    this.cars=this.router.getCurrentNavigation()?.extras.state as ICar[];
-    console.log(this.cars)
+  constructor(private router:Router,private dataTransferService:DataTransferService) {
+      // this.cars=this.router.getCurrentNavigation()?.extras.state as ICar[];
+      // console.log(this.cars)
       }
 
   ngOnInit(): void {
+    this.dataTransferService.getData().subscribe(value => this.cars=value)
   }
 
 }
